@@ -1,0 +1,27 @@
+html{
+  font-size: 62.5%;
+  max-width: 100%;
+}
+
+body{
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: $m-size;
+}
+
+button{
+    cursor: pointer;
+}
+
+button:disabled{
+  cursor: default;
+}
+
+.minimized{
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.break-word{
+    word-break: break-all;
+}
