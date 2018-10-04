@@ -6,8 +6,7 @@
   "license": "MIT",
   "scripts": {
     "heroku-postbuild": "yarn run build:prod",
-    "start" : "node server/server.js",
-    "serve": "live-server public/",
+    "start": "node server/server.js",
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server"
@@ -23,7 +22,6 @@
     "css-loader": "^1.0.0",
     "express": "^4.16.3",
     "extract-text-webpack-plugin": "^3.0.2",
-    "live-server": "^1.2.0",
     "mini-css-extract-plugin": "^0.4.3",
     "moment": "^2.22.2",
     "node-sass": "^4.9.3",
@@ -40,10 +38,11 @@
     "style-loader": "^0.23.0",
     "uuid": "^3.3.2",
     "validator": "^10.7.0",
-    "webpack": "^4.17.1",
-    "webpack-dev-server": "^3.1.7"
+    "webpack": "^4.17.1"
   },
   "devDependencies": {
-    "webpack-cli": "^3.1.0"
+    "chalk": "^2.4.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.7"
   }
 }
