@@ -1,11 +1,11 @@
 import React from 'react';
 import ExpenseListItem from './ExpenseListItem';
 import selectExpenses from '../selectors/expenses';
+
 import {connect} from 'react-redux';
 const ExpenseList = (props)=>(
   <div>
     <h1>ExpenseList</h1>
-    {props.expenses.length}
     <ol>
     {props.expenses.map((expense)=>(
       <ExpenseListItem key = {expense.id} {...expense}/>
@@ -15,8 +15,8 @@ const ExpenseList = (props)=>(
 );
 
 const mapStateToProps = (state)=>({
-      expenses: selectExpenses( state.expenses, state.filters)
-});
+      expenses: selectExpenses( state.expenses, state.filters),
+    });
 
 const motherComponentCreator = connect(mapStateToProps);
 export default motherComponentCreator(ExpenseList);
